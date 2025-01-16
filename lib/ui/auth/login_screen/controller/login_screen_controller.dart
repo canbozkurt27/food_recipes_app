@@ -35,7 +35,8 @@ class LoginScreenController extends GetxController {
     if (validate) {
       UserManager.userModel = model;
       UserController().setUserFromLocale(model.mail);
-
+      mailTextEditingController.text = "";
+      passwordTextEditingController.text = "";
       Get.to(MainMenu());
     } else {
       //TODO şifren yanlış uyarısı ver
